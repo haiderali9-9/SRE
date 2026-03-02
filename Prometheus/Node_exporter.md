@@ -1,4 +1,4 @@
-Absolutely! I’ve drafted a **GitHub README** for you that explains how to install Prometheus Node Exporter with TLS, including your commands, certificate generation, and running the official binary. You can copy this as `README.md` in your repository.
+
 
 ---
 
@@ -158,7 +158,3 @@ curl -k https://localhost:9100/metrics
 
 ---
 
-If you want, I can also make an **even cleaner version with one “copy-paste” bash block** that **installs Node Exporter, sets TLS, and systemd service in one go**, so anyone can run it without editing files manually.  
-
-Do you want me to create that version too?
-```
