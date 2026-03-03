@@ -48,6 +48,9 @@ sudo openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 \
 * `node_exporter.crt` → certificate
 
 ---
+## Generate the password
+ sudo systemctl status prometheus
+ htpasswd -nBC 12 "" | tr -d ':\n'
 
 ## 3. Create the Web Config for TLS
 
@@ -57,6 +60,9 @@ Create `web-config.yml`:
 tls_server_config:
   cert_file: /etc/prometheus/node_exporter.crt
   key_file: /etc/prometheus/node_exporter.key
+basic_auth_users:
+  node-exporter: $2y$12$/oxdNlCurdWmK9LBlvN8XubnMc7uRgoEI.xvHlHiYyN1gMgoA/ohC
+
 ```
 
 Save this in `/etc/prometheus/web-config.yml`.
