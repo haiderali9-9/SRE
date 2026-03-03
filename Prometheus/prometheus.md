@@ -67,8 +67,12 @@ scrape_configs:
   - job_name: 'node_exporter'
     scheme: https
     tls_config:
-      ca_file: /etc/prometheus/node_exporter.crt  # optional if self-signed
-      insecure_skip_verify: true 
+      ca_file: /etc/prometheus/node_exporter.crt
+      insecure_skip_verify: true
+    basic_auth:
+      username: node-exporter
+      password: 1234
+     
     static_configs:
       - targets: ['localhost:9100']
 ```
