@@ -1,4 +1,4 @@
-You're right, sorry about that! Here's the README with **only** the password section fixed, everything else exactly as before:
+
 
 ````markdown
 # Prometheus Node Exporter Installation with TLS
@@ -118,4 +118,4 @@ curl -k https://localhost:9100/metrics
 * [Prometheus Node Exporter GitHub](https://github.com/prometheus/node_exporter)
 * [Node Exporter TLS Configuration](https://github.com/prometheus/node_exporter#tls-support)
 ```
-````
+
